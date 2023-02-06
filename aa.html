@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML JavaScript output on same page</title>
+    <script>
+        function myform()
+        {
+          var fname = document.getElementById("fname").value;
+          var lname = document.getElementById("lname").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+          var message = document.getElementById("message").value;
+        
+          document.writeln("Your Information: <br>" +"First name:" +fname +"<br>");
+          document.writeln( "Last name:"+ lname +"<br>");
+          document.writeln("Email:" + email +"<br>");
+          document.writeln("Phone:" + phone +"<br>");
+          document.writeln("Message:"+ message +"<br>");
+        }
+          </script>
+</head>
+<body>
+    <form onsubmit="myform()">
+        <div class="container">
+        <h3 class="form-heading">GET IN TOUCH</h3>
+        <input type="text" id="fname" placeholder="*First Name" required><br>
+        <input type="text" id="lname" placeholder="*Last Name" required><br>
+        <input type="email" id="email" placeholder="*Email ID" required><br>
+        <input type="text" id="phone" placeholder="*Phone no." required><br>
+        
+        <input class="message" type="text" id="message" placeholder="What can I do?"><br>
+        <button class="submit" type="submit">SUBMIT</button>
+      </div>
+      </form>
+</body>
+</html>
